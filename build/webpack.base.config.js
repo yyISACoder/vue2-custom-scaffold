@@ -11,7 +11,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.png$|\.jpg$|\.gif$|\.jpeg$/i,
+        test: /\.(png|jpg|gif|jpeg)$/i,
         exclude: /node_modules/,
         use: [{
           loader: 'url-loader',
@@ -21,7 +21,7 @@ module.exports = {
         }]
       },
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: [
           'cache-loader',
@@ -33,8 +33,6 @@ module.exports = {
         test: /\.vue$/,
         exclude: /node_modules/,
         use: [
-          'cache-loader',
-          'thread-loader',
           'vue-loader'
         ]
       },
@@ -58,7 +56,7 @@ module.exports = {
     new VueLoaderPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: NODE_ENV === 'development' ? 'Carl的vue2脚手架-开发模式' : 'Carl的vue2脚手架-生产模式',
+      title: NODE_ENV === 'development' ? 'Carl的Vue2脚手架-开发模式' : 'Carl的Vue2脚手架-生产模式',
       template: path.join(__dirname,'..','public','index.html')
     })
   ],

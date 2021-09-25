@@ -1,10 +1,11 @@
 {
   "name": "yy-vue2-custom-scaffold",
   "version": "1.0.0",
-  "description": "基于vue2搭建的脚手架",
+  "description": "基于Webpack4搭建的Vue2脚手架",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack serve --config ./build/webpack.dev.config.js --open",
-    "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.prod.config.js"
+    "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.prod.config.js",
+    "build:report": "cross-env NODE_ENV=production REPORT=true webpack --config ./build/webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
