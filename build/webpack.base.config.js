@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
@@ -42,6 +43,7 @@ module.exports = {
         use: [
           NODE_ENV === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
+          'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
@@ -53,6 +55,7 @@ module.exports = {
     ]
   },
   plugins:[
+    new webpack.ProgressPlugin(),
     new VueLoaderPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
@@ -65,6 +68,9 @@ module.exports = {
       "@src": path.join(__dirname,'..','src')
     }
     //extensions: ['*','jpg','png','gif','jpeg']
+  },
+  optimization: {
+    runtimeChunk: 'single'
   },
   output: {
     path: path.join(__dirname,'..','dist'),
