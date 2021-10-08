@@ -6,11 +6,11 @@
 3. 图片资源的引入
 4. 支持js新版本语法
 5. 支持对打包构建产物的分析
-6. 支持css3新语法
+6. 自动添加css新属性的浏览器前缀
 7. 集成了vuex
 8. 集成了vue-router
 
 ## 使用
-1. yarn
-2. yarn dev: 开发
-3. yanr build: 打包
+1. **yarn dev** 开发
+2. **yarn build** 打包
+3. **yarn build:report** 打包并查看报告
