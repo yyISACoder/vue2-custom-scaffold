@@ -65,9 +65,9 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      "@src": path.join(__dirname,'..','src')
-    }
-    //extensions: ['*','jpg','png','gif','jpeg']
+      "@": path.join(__dirname,'..','src')
+    },
+    extensions: ['.js','.json','.vue']
   },
   optimization: {
     runtimeChunk: 'single'

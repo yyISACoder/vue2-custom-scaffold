@@ -1,57 +1,14 @@
 <template>
-  <div class="root">
-    <img
-      :src="avatar"
-      class="avatar"
-    />
-    <p>欢迎使用Carl的Vue2脚手架😉</p>
-    <p>github地址：<a href="https://github.com/yyISACoder/vue2-custom-scaffold" target="_blank">https://github.com/yyISACoder/vue2-custom-scaffold</a></p>
+  <div class="app-wrapper">
+    <router-view />
   </div>
 </template>
-
 <script>
-import avatar from './assets/images/avatar.jpg'
-
-export default {
-  name: "App",
-  data() {
-    return {
-      avatar
+  export default {
+    name: "App",
+    mounted() {
+      //vue-router库本身的问题，如果不加catch，会报vue-router.esm.js?8c4f:2065 Uncaught (in promise) NavigationDuplicated: Avoided redundant navigation to current location: "/welcome"，未找到更佳的解决方案
+      this.$router.push('/welcome').catch(()=>{})
     }
   }
-};
 </script>
-
-<style lang="scss" scoped>
-.root {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #c2e9ff;
-  .avatar {
-    width: 200px;
-    border-radius: 50%;
-  }
-  p{
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    &:nth-child(3) {
-      margin-top: 100px;
-      a {
-        color:#00f;
-        text-decoration: underline;
-        &:hover {
-          color: #40a9ff;
-        }
-      }
-    }
-  }
-}
-</style>
