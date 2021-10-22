@@ -8,7 +8,7 @@ import './assets/style/reset.scss'
 Vue.use(VueRouter)
 
 new Vue({
-  render: h => h(App),
+  render: (h) => h(App),
   router,
   store
 }).$mount('#root')

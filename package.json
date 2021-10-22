@@ -9,7 +9,8 @@
     "eslint:init": "eslint --init",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "commitlint": "commitlint -e"
+    "commitlint": "commitlint -e",
+    "eslint:fix": "eslint --ext .js,.vue --fix src"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,8 @@
     "cross-env": "^7.0.3",
     "dart-sass": "^1.25.0",
     "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^7.20.0",
     "eslint-webpack-plugin": "^3.0.1",
     "file-loader": "^6.2.0",
@@ -42,6 +45,7 @@
     "husky": "^7.0.4",
     "lint-staged": "^11.2.3",
     "mini-css-extract-plugin": "1.6.2",
+    "prettier": "^2.4.1",
     "style-loader": "2.0.0",
     "thread-loader": "^3.0.4",
     "url-loader": "^4.1.1",

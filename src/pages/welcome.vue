@@ -1,30 +1,33 @@
 <template>
   <div class="wrapper">
-    <img
-      :src="avatar"
-      class="avatar"
-    />
+    <img :src="avatar" class="avatar" />
     <p>{{ welcomeTxt }}</p>
-    <p>github地址：<a href="https://github.com/yyISACoder/vue2-custom-scaffold" target="_blank">https://github.com/yyISACoder/vue2-custom-scaffold</a></p>
+    <p>
+      github地址：<a
+        href="https://github.com/yyISACoder/vue2-custom-scaffold"
+        target="_blank"
+        >https://github.com/yyISACoder/vue2-custom-scaffold</a
+      >
+    </p>
   </div>
 </template>
 
 <script>
-  import avatar from '@/assets/images/avatar.jpg'
+import avatar from '@/assets/images/avatar.jpg'
 
-  export default {
-    name: "App",
-    computed: {
-      welcomeTxt() {
-        return this.$store.state.welcomeTxt
-      }
-    },
-    data() {
-      return {
-        avatar
-      }
+export default {
+  name: 'App',
+  computed: {
+    welcomeTxt() {
+      return this.$store.state.welcomeTxt
+    }
+  },
+  data() {
+    return {
+      avatar
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -43,14 +46,14 @@
     width: 200px;
     border-radius: 50%;
   }
-  p{
+  p {
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
     &:nth-child(3) {
       margin-top: 100px;
       a {
-        color:#00f;
+        color: #00f;
         text-decoration: underline;
         &:hover {
           color: #40a9ff;
