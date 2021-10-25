@@ -10,7 +10,8 @@
     "eslint:init": "eslint --init",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "commitlint": "commitlint -e"
+    "commitlint": "commitlint -e",
+    "eslint:fix": "eslint --ext .js,.vue --fix src"
   },
   "repository": {
     "type": "git",

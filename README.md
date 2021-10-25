@@ -9,6 +9,7 @@
 6. 自动添加css新属性的浏览器前缀
 7. 集成了vuex
 8. 集成了vue-router
+9. 集成lint-staged、husky、commitlint、eslint、prettier工具链，用于规范代码风格与提高代码质量
 
 ## 使用
 1. **yarn dev** 开发
