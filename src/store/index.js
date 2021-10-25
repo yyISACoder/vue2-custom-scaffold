@@ -9,7 +9,7 @@ const store = new Vuex.Store({
     welcomeTxt: '欢迎使用Carl的Vue2脚手架😉'
   },
   mutations: {
-    changeWelcomeTxt(state,payload) {
+    changeWelcomeTxt(state, payload) {
       state.welcomeTxt = payload
     }
   }
