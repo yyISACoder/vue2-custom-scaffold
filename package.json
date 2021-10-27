@@ -10,8 +10,7 @@
     "eslint:init": "eslint --init",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "commitlint": "commitlint -e",
-    "eslint:fix": "eslint --ext .js,.vue --fix src"
+    "commitlint": "commitlint -e"
   },
   "repository": {
     "type": "git",
@@ -35,6 +34,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "core-js": "3",
     "cross-env": "^7.0.3",
+    "css-loader": "5.0.0",
     "dart-sass": "^1.25.0",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
@@ -46,7 +46,10 @@
     "husky": "^7.0.4",
     "lint-staged": "^11.2.3",
     "mini-css-extract-plugin": "1.6.2",
+    "postcss-loader": "4.0.4",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.4.1",
+    "sass-loader": "10.0.0",
     "style-loader": "2.0.0",
     "thread-loader": "^3.0.4",
     "url-loader": "^4.1.1",
@@ -61,10 +64,6 @@
   "dependencies": {
     "@babel/runtime": "^7.15.4",
     "@babel/runtime-corejs3": "^7.15.4",
-    "autoprefixer": "9.8.5",
-    "css-loader": "5.0.0",
-    "postcss-loader": "4.0.4",
-    "sass-loader": "10.0.0",
     "vue": "^2.6.14",
     "vue-router": "^3.5.2",
     "vuex": "^3.6.2"
