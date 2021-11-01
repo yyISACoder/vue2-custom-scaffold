@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import request from '@/utils/request'
 import avatar from '@/assets/images/avatar.jpg'
 
 export default {
@@ -26,6 +27,10 @@ export default {
     return {
       avatar
     }
+  },
+  async mounted() {
+    const res = await request('scaffold')
+    console.log(res)
   }
 }
 </script>

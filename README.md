@@ -9,7 +9,8 @@
 6. 支持css新语法特性
 7. 集成了 **vuex**
 8. 集成了 **vue-router**
-9. 集成lint-staged、husky、commitlint、eslint、prettier工具链，用于规范代码风格与提高代码质量
+9. 集成 **axios**
+10. 集成lint-staged、husky、commitlint、eslint、prettier工具链，用于规范代码风格与提高代码质量
 
 ## 使用
 1. **yarn dev** 开发
